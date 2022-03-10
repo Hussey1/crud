@@ -1,0 +1,37 @@
+<div class="container">
+  <div style="text-align: center"><h1>Update New Student</h1></div>
+  <div style="width: 50%; margin: auto">
+    <form [formGroup]="addForm" novalidate class="form">
+      <input type="hidden" name="id" formControlName="id" />
+      <div class="row">
+        <div class="col-md-6">Username</div>
+        <div class="col-md-6">
+          <input
+            class="form-control"
+            type="text"
+            name="username"
+            formControlName="username"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">Password</div>
+        <div class="col-md-6">
+          <input
+            class="form-control"
+            type="password"
+            name="password"
+            formControlName="password"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <button (click)="onEdit()" class="btn btn-success">
+            Update Student
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

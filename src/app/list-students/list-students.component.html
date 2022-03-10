@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+    <th>username</th>
+    <th>password</th>
+    <th>Actions</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{ student.username }}</td>
+      <td>{{ student.password }}</td>
+      <td>
+        <a class="btn btn-success" href="edit/{{ student.id }}">Edit</a> |
+        <button (click)="deleteStudent(student)" class="btn btn-info">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
